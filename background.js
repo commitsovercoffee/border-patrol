@@ -53,6 +53,7 @@ browser.browserAction.onClicked.addListener(async (tab) => {
       // Show outlines & tooltip.
       await browser.tabs.insertCSS(tabId, outlineCSS);
       await browser.tabs.executeScript(tabId, { file: "tooltip.js" });
+      await browser.tabs.executeScript(tabId, { file: "deprecated.js" });
       await browser.browserAction.setTitle({ tabId, title: "Hide Outlines" });
     } else {
       // Hide outlines & tooltip.
@@ -67,6 +68,18 @@ browser.browserAction.onClicked.addListener(async (tab) => {
             window.lacewing_tooltip.remove();
             window.lacewing_tooltip = null;
           }
+        `,
+      });
+      await browser.tabs.executeScript(tabId, {
+        code: `
+          (function() {
+            const style = document.getElementById("lacewing-deprecated-style");
+            if (style) style.remove();
+            const labels = document.querySelectorAll(".lacewing-deprecated-label");
+            for (const label of labels) {
+              label.remove();
+            }
+          })();
         `,
       });
       await browser.browserAction.setTitle({ tabId, title: "Show Outlines" });
