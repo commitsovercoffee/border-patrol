@@ -1,16 +1,28 @@
 {
     "manifest_version": 2,
-    "name": "lacewing",
+    "name": "Border Patrol",
     "version": "1.0",
-    "description": "Shows element outlines, and tag info (on hover).",
-    "homepage_url": "https://github.com/commitsovercoffee/lacewing",
+    "description": "Shows borders (okay, technically CSS outlines) and tag info on hover.",
+    "homepage_url": "https://github.com/commitsovercoffee/border-patrol",
     "icons": {
-        "48": "icons/icon-48.svg"
+        "16": "icons/logo.svg",
+        "32": "icons/logo.svg",
+        "48": "icons/logo.svg",
+        "64": "icons/logo.svg",
+        "96": "icons/logo.svg",
+        "128": "icons/logo.svg"
     },
     "permissions": ["activeTab", "tabs"],
     "browser_action": {
-        "default_icon": "icons/icon-48.svg",
-        "default_title": "Show Outlines"
+        "default_title": "Show Outlines",
+        "default_icon": {
+            "16": "icons/logo.svg",
+            "32": "icons/logo.svg",
+            "48": "icons/logo.svg",
+            "64": "icons/logo.svg",
+            "96": "icons/logo.svg",
+            "128": "icons/logo.svg"
+        }
     },
     "background": {
         "scripts": ["background.js"],
