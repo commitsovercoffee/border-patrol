@@ -2,30 +2,28 @@
     "manifest_version": 2,
     "name": "Border Patrol",
     "version": "1.0",
-    "description": "Shows borders (okay, technically CSS outlines) and tag info on hover.",
-    "homepage_url": "https://github.com/commitsovercoffee/border-patrol",
+    "description": "Shows borders (okay, technically CSS outlines) on all HTML elements and their tag info (on hover).",
+    "author": "Sourav Singh",
+    "browser_action": {
+        "browser_style": false,
+        "default_area": "navbar",
+        "default_icon": {
+            "16": "img/logo.svg",
+            "32": "img/logo.svg",
+            "64": "img/logo.svg"
+        },
+        "default_title": "Show Outlines"
+    },
     "icons": {
-        "16": "icons/logo.svg",
-        "32": "icons/logo.svg",
-        "48": "icons/logo.svg",
-        "64": "icons/logo.svg",
-        "96": "icons/logo.svg",
-        "128": "icons/logo.svg"
+        "16": "img/logo.svg",
+        "32": "img/logo.svg",
+        "48": "img/logo.svg",
+        "64": "img/logo.svg",
+        "96": "img/logo.svg",
+        "128": "img/logo.svg"
     },
     "permissions": ["activeTab", "tabs"],
-    "browser_action": {
-        "default_title": "Show Outlines",
-        "default_icon": {
-            "16": "icons/logo.svg",
-            "32": "icons/logo.svg",
-            "48": "icons/logo.svg",
-            "64": "icons/logo.svg",
-            "96": "icons/logo.svg",
-            "128": "icons/logo.svg"
-        }
-    },
     "background": {
-        "scripts": ["background.js"],
-        "persistent": false
+        "scripts": ["background.js"]
     }
 }
