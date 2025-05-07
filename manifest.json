@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Border Patrol",
     "version": "1.0",
-    "description": "Shows borders (okay, technically CSS outlines) on all HTML elements and their tag info (on hover).",
+    "description": "Shows borders on all HTML elements for layout debugging.",
     "author": "Sourav Singh",
     "browser_action": {
         "browser_style": false,
